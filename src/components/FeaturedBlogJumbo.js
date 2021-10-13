@@ -1,5 +1,6 @@
 import React from 'react'
 import { Jumbotron, Button } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const FeaturedArticleJumbo = ({ blog }) => {
   const baseImgUrl = "http://localhost:1337"
@@ -11,7 +12,7 @@ const FeaturedArticleJumbo = ({ blog }) => {
           <h1>{blog.title}</h1>
           <hr style={{width: '80%', marginLeft: '0'}}/>
           <h4 style={{paddingBottom: '30px'}}>{blog.preview}</h4>
-          <Button variant="secondary">Read More</Button>
+          <Button variant="secondary" as={Link} to={`/post/${blog.id}`}>Read More</Button>
         </div>
       </Jumbotron>
     </div>

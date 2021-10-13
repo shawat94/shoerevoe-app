@@ -1,9 +1,16 @@
 import React from 'react'
 import useFetch from '../hooks/useFetch'
 import PostCard from '../components/PostCard'
-import { Container, Row } from 'react-bootstrap'
+import { Table, TableRow } from 'react-bootstrap'
+import { useHistory } from 'react-router-dom'
 
-const PostArchive = () => {
+const PostArchive = () => {  
+  
+  const history = useHistory()
+
+  const handleRowClick = (post) => {
+    history.push(`/post/${post.id}`)
+  } 
 
   const { loading, error, data } = useFetch('http://localhost:1337/posts')
 
@@ -15,15 +22,20 @@ const PostArchive = () => {
       <div>
         <h1 align="center">All Posts</h1>
       </div>
-      <div class="archive-card-container">
-        <Container fluid> 
-          <Row gutter={24}>
-            {data.map(post => ( 
-              <div key={post.id} className="col-md-4">
-                  <PostCard post={post} />
-              </div>))}
-          </Row>
-        </Container>
+      <div style={{ marginLeft: '150px', marginRight: '150px' }}>
+        <Table striped bordered hover variant="dark">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Category</th>
+              <th>Author</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {data.map(post => <tr onClick={() => handleRowClick(post)}><td>{post.title}</td><td>{post.type}</td><td>{post.author}</td><td>{post.date}</td></tr>)}
+          </tbody>
+        </Table>
       </div>
     </div>
   )

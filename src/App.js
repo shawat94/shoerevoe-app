@@ -5,7 +5,7 @@ import PostDetail from './pages/PostDetail'
 import PostArchive from './pages/PostArchive'
 import About from './pages/About'
 import useFetch from './hooks/useFetch' 
-import { Switch, Route, useRouteMatch } from "react-router-dom"
+import { Switch, Route, useRouteMatch  } from "react-router-dom"
 
 const App = () => {
   const { loading, error, data } = useFetch('http://localhost:1337/posts')
