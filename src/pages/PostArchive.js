@@ -1,13 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import useFetch from '../hooks/useFetch'
 import PostCard from '../components/PostCard'
-import { Table, TableRow } from 'react-bootstrap'
+import { Table, TableRow, Form } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
+import SearchBar from '../components/SearchBar'
+import ArchiveTable from '../components/ArchiveTable'
 
 const PostArchive = () => {  
   
-  const history = useHistory()
+  const [ searchTerm, setSearchTerm ] = useState('')
 
+  const history = useHistory()
+  
   const handleRowClick = (post) => {
     history.push(`/post/${post.id}`)
   } 
@@ -19,23 +23,12 @@ const PostArchive = () => {
 
   return(
     <div>
-      <div>
-        <h1 align="center">All Posts</h1>
+      <div style={{ marginTop: '30px'}}>
+        <h1 align="center">Post Archive</h1>
       </div>
       <div style={{ marginLeft: '150px', marginRight: '150px' }}>
-        <Table striped bordered hover variant="dark">
-          <thead>
-            <tr>
-              <th>Title</th>
-              <th>Category</th>
-              <th>Author</th>
-              <th>Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map(post => <tr onClick={() => handleRowClick(post)}><td>{post.title}</td><td>{post.type}</td><td>{post.author}</td><td>{post.date}</td></tr>)}
-          </tbody>
-        </Table>
+        <SearchBar setSearchTerm={setSearchTerm}/>
+        <ArchiveTable data={data} searchTerm={searchTerm} />
       </div>
     </div>
   )
