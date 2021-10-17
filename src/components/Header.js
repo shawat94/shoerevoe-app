@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 const Header = () => {
 
   return (
-    <div>
+    <div id="header">
       <Navbar bg="dark" variant="dark">
         <Navbar.Brand as={Link} to='/'>
           ShoeRevoe

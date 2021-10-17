@@ -28,7 +28,7 @@ const PostArchive = () => {
       </div>
       <div style={{ marginLeft: '150px', marginRight: '150px' }}>
         <SearchBar setSearchTerm={setSearchTerm}/>
-        <ArchiveTable data={data} searchTerm={searchTerm} />
+        <ArchiveTable data={data} searchTerm={searchTerm} handleRowClick={handleRowClick} />
       </div>
     </div>
   )

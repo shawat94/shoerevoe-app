@@ -8,7 +8,7 @@ const SearchBar = ({ setSearchTerm }) => {
   }
 
   return (
-    <div>
+    <div id="search">
     <Form>
       <Form.Group>
         <Form.Control onChange={handleSearchChange} placeholder='Search' />

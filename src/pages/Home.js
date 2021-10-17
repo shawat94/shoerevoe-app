@@ -8,7 +8,7 @@ const Home = ({ posts }) => {
 
   return (
     <div>
-      <FeaturedArticleJumbo blog={posts[2]} />
+      <FeaturedArticleJumbo blog={posts[0]} />
       <div style={{padding: '20px 0px 0px'}}>
         <h1 align="center">Recent Posts</h1>
       </div>

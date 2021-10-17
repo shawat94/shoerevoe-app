@@ -19,10 +19,8 @@ const App = () => {
   if (loading) return(<p> loading </p>)
   if (error) console.log(error)
 
-  console.log(data[0].id)
-
   return (
-    <div>
+    <div id="appbody" >
       <Header />
       <Switch>
         <Route path="/about">
