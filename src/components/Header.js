@@ -20,6 +20,11 @@ const Header = () => {
             About
           </Nav.Link>
         </Nav>
+        <Nav>
+          <Nav.Link as={Link} to='/finder'>
+            Shoe Finder
+          </Nav.Link>
+        </Nav>
       </Navbar>
     </div>
   )

@@ -5,6 +5,7 @@ import PostDetail from './pages/PostDetail'
 import PostArchive from './pages/PostArchive'
 import About from './pages/About'
 import useFetch from './hooks/useFetch' 
+import ShoeFinder from './pages/ShoeFinderPage'
 import { Switch, Route, useRouteMatch  } from "react-router-dom"
 
 const App = () => {
@@ -23,6 +24,9 @@ const App = () => {
     <div id="appbody" >
       <Header />
       <Switch>
+        <Route path="/finder">
+          <ShoeFinder />
+        </Route>
         <Route path="/about">
           <About />
         </Route>
