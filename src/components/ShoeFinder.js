@@ -13,11 +13,12 @@ const ShoeFinder = () => {
 
   const [finderResults, setFinderResults] = useState([])
   const [finderCriteria, setFinderCriteria] = useState({
-    "Usage": {"value": "", "control": dropDownValue},
-    "Brand": {"value": "", "control": dropDownValue},
-    "Plate": {"value": "", "control": dropDownValue},
+    "Usage": {"value": "Daily", "required": false, "control": dropDownValue},
+    "Brand": {"value": "Adidas", "required": false, "control": dropDownValue},
+    "Plate": {"value": "false", "required": false, "control": dropDownValue},
     "Weight": {
       "value": 2, 
+      "required": false,
       "sliderValues": {
         "values": [
           {"name": "Ultralight", "range": {"min": "0", "max": "6"}},
@@ -31,6 +32,7 @@ const ShoeFinder = () => {
       "control": sliderValue},
     "Drop": {
       "value": 2,
+      "required": false,
       "sliderValues": {
         "values": [
           {"name": "Zero", "range": {"min": "0", "max": "1"}},
@@ -44,6 +46,7 @@ const ShoeFinder = () => {
       "control": sliderValue},
     "Price": {
       "value": 1,
+      "required": false,
       "sliderValues": {
         "values": [
           {"name": "", "range": {"min": "0", "max": "100"}},
@@ -59,6 +62,7 @@ const ShoeFinder = () => {
       "control": sliderValue},
     "HeelStack": {
       "value": 2,
+      "required": false,
       "sliderValues": {
         "values": [
           {"name": "Minimal", "range": {"min": "0", "max": "5"}},

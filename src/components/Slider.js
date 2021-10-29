@@ -1,4 +1,5 @@
 import React from 'react'
+import FilterCheckbox from './FilterCheckbox'
 
 const Slider = ({ name, finderCriteria, setFinderCriteria }) => {
 
@@ -18,6 +19,8 @@ const Slider = ({ name, finderCriteria, setFinderCriteria }) => {
     <div>
       <div>
         <label>{name}</label>
+        <br/>
+        <FilterCheckbox name={name} finderCriteria={finderCriteria} setFinderCriteria={setFinderCriteria} />
         <p>{sliderValue}</p>
       </div>
       <div>

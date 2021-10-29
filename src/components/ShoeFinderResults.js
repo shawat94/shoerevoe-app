@@ -9,7 +9,10 @@ const ShoeFinderResults = ({ shoeData, finderCriteria, finderResults, setFinderR
   let finderQueryResults = shoeData.filter(shoe => { 
     let filterList = criteriaList.map(criteria => {
       let criteriaDetail = finderCriteria[criteria]
-      if (finderCriteria[criteria]['control'] === sliderValue) {
+      if (!finderCriteria[criteria]['required']) {
+        return true
+      }
+      else if (finderCriteria[criteria]['control'] === sliderValue) {
         let criteriaValue = criteriaDetail['sliderValues']['values'][criteriaDetail['value']]
         if (criteriaDetail['type'] === 'range') {
           return({[criteria]: shoe[criteria] <= criteriaValue['range']['max'] && shoe[criteria] >= criteriaValue['range']['min']})
@@ -28,9 +31,7 @@ const ShoeFinderResults = ({ shoeData, finderCriteria, finderResults, setFinderR
   return (
       <Container fluid>
         <Row>
-          <div className="col-md-4">
-            {finderQueryResults.map(result => <ShoeCard shoe={result} />)}
-          </div>
+            {finderQueryResults.map(result => <div className="col-md-4" ><ShoeCard shoe={result} /></div>)}
         </Row>
       </Container>
   )

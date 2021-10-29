@@ -1,4 +1,5 @@
 import React from 'react'
+import FilterCheckbox from './FilterCheckbox'
 
 const DropDownSelect = ({data, criteria, finderCriteria, setFinderCriteria}) => {
 
@@ -21,6 +22,7 @@ const DropDownSelect = ({data, criteria, finderCriteria, setFinderCriteria}) => 
       <div>
         <label>{criteria}</label>
       </div>
+      <FilterCheckbox name={criteria} finderCriteria={finderCriteria} setFinderCriteria={setFinderCriteria} />
       <div>
         <select onClick={handleInputChange} name={criteria} id={criteria}>{getDropDownOptions(criteria).map(option => {
           return(<option value={option}>{(option).toString()}</option>

@@ -18,9 +18,6 @@ const ShoeCard = ({ shoe }) => {
 
   const bodyText = displayAttributes.map(attribute => <Card.Text style={{margin: '2px'}}>{`${attribute}: ${shoe[attribute]}`}</Card.Text>)
 
-  console.log(bodyText)
-
-
   return (
     <div>
       <Card style={{height: '400px'}} className="bg-dark text-white" border="secondary">
