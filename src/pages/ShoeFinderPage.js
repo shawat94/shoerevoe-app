@@ -5,10 +5,10 @@ const ShoeFinderPage = () => {
 
   return (
     <div>
-      <div>
+      <div align='center' style={{ marginTop: '30px'}}>
         <h1>Running Shoe Finder</h1>
       </div>
-      <div>
+      <div style={{ padding: '30px'}}>
         <ShoeFinder />
       </div>
     </div>
