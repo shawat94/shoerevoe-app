@@ -1,11 +1,9 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
 import DOMPurify from 'dompurify'
 import { Jumbotron } from 'react-bootstrap'
+import './PostDetail.css'
 
 const marked = require("marked")
-
-
 
 const PostDetail = ({ post }) => {
 
@@ -19,13 +17,13 @@ const PostDetail = ({ post }) => {
   return (
     <div>
       <div>
-        <Jumbotron style={{ backgroundImage: imgUrl, backgroundSize: 'cover', backgroundPosition: 'center center', height: '400px' }}>
-          <div style={{ textAlign: 'center', padding: '15px', width: '40%', margin: 'auto', backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
+        <Jumbotron className='header-image' style={{ backgroundImage: imgUrl }}>
+          <div className='header-image-text'>
             <h1>{post.title}</h1>
           </div>
         </Jumbotron>
       </div>
-      <div dangerouslySetInnerHTML={{ __html: purePost }} style={{ padding: '30px', marginLeft: '150px', marginRight: '150px', backgroundColor: '#525252' }} />
+      <div dangerouslySetInnerHTML={{ __html: purePost }} className='review-text' />
     </div>
   )
 }

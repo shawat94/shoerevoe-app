@@ -1,0 +1,20 @@
+.review-text {
+  padding: 30px;
+  margin-left: 150px;
+  margin-right: 150px;
+  background-color: #525252 
+}
+
+.header-image-text {
+  text-align: center;
+  padding: 15px;
+  width: 40%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+.header-image { 
+  background-size: cover;
+  background-position: center center;
+  height: 400px
+}

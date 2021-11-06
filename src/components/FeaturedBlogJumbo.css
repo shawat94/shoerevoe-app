@@ -1,0 +1,25 @@
+.featured-blog-jumbo {
+  padding-top: 0;
+  padding-bottom: 0;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  background-size: cover;
+  background-position: center center;
+  height: 400px
+}
+
+.jumbo-interior {
+  padding: 15px;
+  width: 40%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5)
+}
+
+hr {
+  width: 80%;
+  margin-left: 0
+}
+
+h4 {
+  padding-bottom: 30px
+}

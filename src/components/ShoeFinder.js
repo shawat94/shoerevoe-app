@@ -3,6 +3,7 @@ import Slider from './Slider'
 import useFetch from '../hooks/useFetch'
 import DropDownSelect from './DropDownSelect'
 import ShoeFinderResults from './ShoeFinderResults'
+import './ShoeFinder.css'
 
 const ShoeFinder = () => {
 
@@ -87,7 +88,7 @@ const ShoeFinder = () => {
 
   return (
     <div> 
-      <div style={{ float: 'left', width: '15%'}}>
+      <div className='filter-panel'>
         {Object.keys(finderCriteria).map(criteria => {
           let criteriaInfo = finderCriteria[criteria]
           if (criteriaInfo.control == sliderValue) {
@@ -95,16 +96,16 @@ const ShoeFinder = () => {
               <Slider name={criteria} finderCriteria={finderCriteria} setFinderCriteria={setFinderCriteria} />
             )
           }
-        })}
+        })}f
       </div>
-      <div style={{float: 'left', width: '15%'}}>
+      <div className='result-panel'>
           {Object.keys(finderCriteria).map(criteria => {
             if (finderCriteria[criteria]["control"] == dropDownValue) {
               return(
                 <DropDownSelect data={data} criteria={criteria} finderCriteria={finderCriteria} setFinderCriteria={setFinderCriteria} />)
           }})}
       </div>
-      <div style={{float: 'right', width: '70%', height: '100%', overflowY: 'scroll'}}>
+      <div className='results'>
         <ShoeFinderResults shoeData={data} finderCriteria={finderCriteria} finderResults={finderResults} setFinderResults={setFinderResults} sliderValue={sliderValue} dropDownValue={dropDownValue} />
       </div>
     </div>

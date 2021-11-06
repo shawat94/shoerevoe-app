@@ -1,17 +1,18 @@
 import React from 'react'
 import { Jumbotron, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import './FeaturedBlogJumbo.css'
 
 const FeaturedArticleJumbo = ({ blog }) => {
   const baseImgUrl = "http://localhost:1337"
 
   return(
     <div>
-      <Jumbotron style={{paddingTop: '0', paddingBottom: '0', borderTop: '2px solid black', borderBottom: '2px solid black', backgroundImage: `url(${baseImgUrl}${blog.HeaderImage.url})`, backgroundSize: 'cover', backgroundPosition: 'center center', height: '400px'}}>
-        <div style={{padding: '15px', width: '40%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.5)'}}>
+      <Jumbotron className='featured-blog-jumbo' style={{backgroundImage: `url(${baseImgUrl}${blog.HeaderImage.url})`}}>
+        <div className='jumbo-interior'>
           <h1>{blog.title}</h1>
-          <hr style={{width: '80%', marginLeft: '0'}}/>
-          <h4 style={{paddingBottom: '30px'}}>{blog.preview}</h4>
+          <hr/>
+          <h4>{blog.preview}</h4>
           <Button variant="secondary" as={Link} to={`/post/${blog.id}`}>Read More</Button>
         </div>
       </Jumbotron>
