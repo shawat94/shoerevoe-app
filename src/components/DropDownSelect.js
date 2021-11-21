@@ -25,8 +25,10 @@ const DropDownSelect = ({data, criteria, finderCriteria, setFinderCriteria}) => 
       <FilterCheckbox name={criteria} finderCriteria={finderCriteria} setFinderCriteria={setFinderCriteria} />
       <div>
         <select onClick={handleInputChange} name={criteria} id={criteria}>{getDropDownOptions(criteria).map(option => {
-          return(<option value={option}>{(option).toString()}</option>
-        )})}</select>
+          if (option) {
+            return(<option value={option}>{(option).toString()}</option>)
+          }
+        })}</select>
       </div>
     </div>
   )

@@ -14,9 +14,9 @@ const ShoeFinder = () => {
 
   const [finderResults, setFinderResults] = useState([])
   const [finderCriteria, setFinderCriteria] = useState({
-    "Usage": {"value": "Daily", "required": false, "control": dropDownValue},
-    "Brand": {"value": "Adidas", "required": false, "control": dropDownValue},
-    "Plate": {"value": "false", "required": false, "control": dropDownValue},
+    "Usage": {"value": "", "required": false, "control": dropDownValue},
+    "Brand": {"value": "", "required": false, "control": dropDownValue},
+    "Plate": {"value": "", "required": false, "control": dropDownValue},
     "Weight": {
       "value": 2, 
       "required": false,
@@ -96,7 +96,7 @@ const ShoeFinder = () => {
               <Slider name={criteria} finderCriteria={finderCriteria} setFinderCriteria={setFinderCriteria} />
             )
           }
-        })}f
+        })}
       </div>
       <div className='result-panel'>
           {Object.keys(finderCriteria).map(criteria => {
