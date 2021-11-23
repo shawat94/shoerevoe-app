@@ -12,6 +12,7 @@ const useFetch = (url) => {
       
       try {
         const baseUrl = process.env.BACKEND_URL
+        console.log(baseUrl + url)
         const response = await axios.get(baseUrl + url)
         setData(response.data)
         setLoading(false)
