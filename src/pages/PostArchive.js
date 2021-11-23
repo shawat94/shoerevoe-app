@@ -14,7 +14,7 @@ const PostArchive = () => {
     history.push(`/post/${post.id}`)
   } 
 
-  const { loading, error, data } = useFetch('http://localhost:1337/posts')
+  const { loading, error, data } = useFetch('/posts')
 
   if (loading) return(<p> loading </p>)
   if (error) return(error)
