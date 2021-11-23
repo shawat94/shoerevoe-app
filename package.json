@@ -7,6 +7,8 @@
     "axios": "^0.21.4",
     "cors": "^2.8.5",
     "dompurify": "^2.3.3",
+    "dotenv": "^8.2.0",
+    "fs": "*",
     "marked": "^3.0.7",
     "react": "^17.0.2",
     "react-bootstrap": "^1.6.3",
