@@ -12,8 +12,6 @@ import { Switch, Route, useRouteMatch  } from "react-router-dom"
 const App = () => {
   const { loading, error, data } = useFetch('/posts')
 
-  require('dotenv').config()
-
   const match = useRouteMatch('/post/:id')
   console.log(match)
   const post = match
