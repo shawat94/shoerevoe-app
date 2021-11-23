@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 import useFetch from '../hooks/useFetch'
-import PostCard from '../components/PostCard'
-import { Table, TableRow, Form } from 'react-bootstrap'
 import { useHistory } from 'react-router-dom'
 import SearchBar from '../components/SearchBar'
 import ArchiveTable from '../components/ArchiveTable'

@@ -1,8 +1,7 @@
 import React from "react"
-import useFetch from "../hooks/useFetch"
 import PostCard from "../components/PostCard"
 import FeaturedArticleJumbo from "../components/FeaturedBlogJumbo"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container, Row } from "react-bootstrap"
 
 const Home = ({ posts }) => {
 
