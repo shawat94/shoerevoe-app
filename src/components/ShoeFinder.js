@@ -90,7 +90,7 @@ const ShoeFinder = () => {
       <div className='filter-panel'>
         {Object.keys(finderCriteria).map(criteria => {
           let criteriaInfo = finderCriteria[criteria]
-          if (criteriaInfo.control == sliderValue) {
+          if (criteriaInfo.control === sliderValue) {
             return(
               <Slider name={criteria} finderCriteria={finderCriteria} setFinderCriteria={setFinderCriteria} />
             )
@@ -99,7 +99,7 @@ const ShoeFinder = () => {
       </div>
       <div className='result-panel'>
           {Object.keys(finderCriteria).map(criteria => {
-            if (finderCriteria[criteria]["control"] == dropDownValue) {
+            if (finderCriteria[criteria]["control"] === dropDownValue) {
               return(
                 <DropDownSelect data={data} criteria={criteria} finderCriteria={finderCriteria} setFinderCriteria={setFinderCriteria} />)
           }})}
