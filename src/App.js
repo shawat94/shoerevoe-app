@@ -9,7 +9,7 @@ import ShoeFinder from './pages/ShoeFinderPage'
 import { Switch, Route, useRouteMatch  } from "react-router-dom"
 
 const App = () => {
-  const { loading, error, data } = useFetch('http://localhost:1337/posts')
+  const { loading, error, data } = useFetch('/posts')
 
   const match = useRouteMatch('/post/:id')
   console.log(match)

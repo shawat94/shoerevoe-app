@@ -6,8 +6,7 @@ import ShoeFinderResults from './ShoeFinderResults'
 import './ShoeFinder.css'
 
 const ShoeFinder = () => {
-
-  const { loading, error, data } = useFetch('http://localhost:1337/shoes')
+  const { loading, error, data } = useFetch('/shoes')
 
   const sliderValue = "slider"
   const dropDownValue = "dropDown"

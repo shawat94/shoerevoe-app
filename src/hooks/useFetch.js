@@ -6,12 +6,14 @@ const useFetch = (url) => {
   const [error, setError] = useState(null)
   const [loading, setLoading] = useState(true)
 
+  const baseUrl = process.env.BACKEND_URL
+
   useEffect(() => {
     const fetchData = async () => {
       setLoading(true)
       
       try {
-        const response = await axios.get(url)
+        const response = await axios.get(baseUrl + url)
         setData(response.data)
         setLoading(false)
       } catch (error) {
