@@ -11,8 +11,6 @@ const PostDetail = ({ post }) => {
   const purePost = DOMPurify.sanitize(htmlPost)
   const headerImgUrl = post.HeaderImage.formats.large.url
 
-  console.log(imgUrl)
-
   return (
     <div>
       <div>
