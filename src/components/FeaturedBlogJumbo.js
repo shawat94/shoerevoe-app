@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom'
 import './FeaturedBlogJumbo.css'
 
 const FeaturedArticleJumbo = ({ blog }) => {
-  const baseImgUrl = "http://localhost:1337"
+  const headerImgUrl = `url(${post.HeaderImage.url})`
 
   return(
     <div>
-      <Jumbotron className='featured-blog-jumbo' style={{backgroundImage: `url(${baseImgUrl}${blog.HeaderImage.url})`}}>
+      <Jumbotron className='featured-blog-jumbo' style={{backgroundImage: headerImgUrl}}>
         <div className='jumbo-interior'>
           <h1>{blog.title}</h1>
           <hr/>

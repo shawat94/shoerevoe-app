@@ -4,13 +4,12 @@ import { Link } from 'react-router-dom'
 
 const ShoeCard = ({ shoe }) => {
 
-  const baseImgUrl = "http://localhost:1337"
   const placeholderImgUrl = "https://via.placeholder.com/1008x756?text=No+Image"
 
   let image
 
   if (shoe.CardImage) {
-    image = <Card.Img variant="top" padding="5%" src={`${baseImgUrl}${shoe.CardImage.url}`} />
+    image = <Card.Img variant="top" padding="5%" src={`${shoe.CardImage.url}`} />
   } else {
     image = <Card.Img variant="top" padding="5%" src={`${placeholderImgUrl}`} />
   }
