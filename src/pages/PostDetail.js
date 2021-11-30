@@ -14,7 +14,7 @@ const PostDetail = ({ post }) => {
   return (
     <div>
       <div>
-        <Jumbotron className='header-image' style={{ backgroundImage: headerImgUrl }}>
+        <Jumbotron className='header-image' style={{ backgroundImage: url(headerImgUrl) }}>
           <div className='header-image-text'>
             <h1>{post.title}</h1>
           </div>
