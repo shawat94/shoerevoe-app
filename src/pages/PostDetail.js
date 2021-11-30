@@ -9,12 +9,12 @@ const PostDetail = ({ post }) => {
 
   const htmlPost = marked(post.body)
   const purePost = DOMPurify.sanitize(htmlPost)
-  const headerImgUrl = post.HeaderImage.formats.large.url
+  const headerImgUrl = `url(${post.HeaderImage.formats.large.url})`
 
   return (
     <div>
       <div>
-        <Jumbotron className='header-image' style={{ backgroundImage: url(headerImgUrl) }}>
+        <Jumbotron className='header-image' style={{ backgroundImage: headerImgUrl }}>
           <div className='header-image-text'>
             <h1>{post.title}</h1>
           </div>
