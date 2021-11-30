@@ -9,7 +9,7 @@ const PostDetail = ({ post }) => {
 
   const htmlPost = marked(post.body)
   const purePost = DOMPurify.sanitize(htmlPost)
-  const headerImgUrl = `url(${post.HeaderImage.formats.large.url})`
+  const headerImgUrl = `url(${post.HeaderImage.url})`
 
   return (
     <div>
