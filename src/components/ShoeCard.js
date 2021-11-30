@@ -26,7 +26,7 @@ const ShoeCard = ({ shoe }) => {
 
   return (
     <div>
-      <Card style={{height: '500px', width: '250px'}} className="bg-dark text-white" border="secondary">
+      <Card style={{height: '500px', minHeight: 'fit-content'}} className="bg-dark text-white" border="secondary">
         {image}
         <Card.Body className="scrollbar-primary" style={{margin: '2px', overflowY: 'auto'}}>
           <Card.Title>{shoe.Name}</Card.Title>
