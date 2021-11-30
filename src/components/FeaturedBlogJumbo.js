@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import './FeaturedBlogJumbo.css'
 
 const FeaturedArticleJumbo = ({ blog }) => {
-  const headerImgUrl = `url(${post.HeaderImage.url})`
+  const headerImgUrl = `url(${blog.HeaderImage.url})`
 
   return(
     <div>
