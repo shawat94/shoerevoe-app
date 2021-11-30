@@ -6,7 +6,7 @@ const PostCard = ({ post }) => {
 
   return (
     <div>
-      <Card style={{height: '400px'}} className="bg-dark text-white" border="secondary" as={Link} to={`/post/${post.id}`}>
+      <Card style={{height: 'fit-content'}} className="bg-dark text-white" border="secondary" as={Link} to={`/post/${post.id}`}>
         <Card.Header style={{fontWeight: "bold", fontStyle: "italic"}}>{post.type}</Card.Header>
         <Card.Img variant="top" padding="5%" src={`${post.HeaderImage.url}`} />
         <Card.Body>
